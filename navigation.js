@@ -51,3 +51,12 @@ document.addEventListener('keydown', (event) => {
   menu.focus();
 });
 syncMenu();
+
+const backToTop = document.querySelector('.floating-top');
+if (backToTop) {
+  function updateBackToTop() {
+    backToTop.hidden = window.scrollY < 320;
+  }
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+}

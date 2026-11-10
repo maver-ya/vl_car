@@ -9,13 +9,6 @@ document.querySelectorAll('[data-car]').forEach((link) => {
   });
 });
 
-const backToTop = document.querySelector('.floating-top');
-function updateBackToTop() {
-  backToTop.hidden = window.scrollY < 320;
-}
-window.addEventListener('scroll', updateBackToTop, { passive: true });
-updateBackToTop();
-
 const calculator = document.querySelector('#calculator');
 const total = calculator.querySelector('output');
 const amounts = [...calculator.querySelectorAll('input[data-step]')];
@@ -76,3 +69,4 @@ for (const input of amounts) {
 
 calculator.addEventListener('submit', (event) => event.preventDefault());
 updateTotal();
+
