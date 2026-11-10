@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="features.css">
 </head>
 <body id="top">
-<header class="site-header"><div class="wrap header-inner"><a class="brand" href="#top">Автобюро</a><nav id="site-nav" aria-label="Разделы сайта"><a href="#cars">Примеры</a><a href="#estimate">Стоимость</a><a href="#process">Этапы</a><a href="#cases">Истории</a><a href="#auction">Аукционный лист</a><a href="#contact">Заявка</a></nav><div class="header-controls"><button type="button" id="theme" aria-label="Тёмная тема" aria-pressed="false" hidden>◐</button><button type="button" id="menu" aria-controls="site-nav" aria-expanded="false" hidden>☰ <span>Меню</span></button></div></div></header>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="#top">Автобюро</a><nav id="site-nav" aria-label="Разделы сайта"><a href="#cars">Примеры</a><a href="#estimate">Стоимость</a><a href="#process">Этапы</a><a href="#cases">Истории</a><a href="#auction">Аукционный лист</a><a href="#tools">Инструменты</a><a href="#contact">Заявка</a></nav><div class="header-controls"><button type="button" id="theme" aria-label="Тёмная тема" aria-pressed="false" hidden>◐</button><button type="button" id="menu" aria-controls="site-nav" aria-expanded="false" hidden>☰ <span>Меню</span></button></div></div></header>
 <div class="wrap feature-bar"><strong>Демоверсия с функциями</strong><a href="../">Обычная версия ↗</a></div><main>
 <section class="hero wrap">
 <div><p class="eyebrow">Подбор · Покупка · Доставка</p>
@@ -85,7 +85,50 @@
 <p><a href="https://exportcarjapan.com/gallery/Auction%20Sheet%20Examples.pdf">Посмотреть примеры оригинальных листов (PDF) ↗</a></p><details open><summary>Пробег</summary><p>Проверьте число и отметки рядом с ним. Если есть сомнения, попросите сверить пробег с доступными документами.</p></details>
 <details><summary>Оценка 4 / B</summary><p>В этом примере 4 — общая оценка, B — состояние салона. Смотрите расшифровку конкретного аукциона и комментарии инспектора.</p></details>
 <details><summary>Замечания A1 и U1</summary><p>На схеме кузова A1 может обозначать небольшую царапину, а U1 — небольшую вмятину. Сверьте обозначения с легендой листа и попросите фото отмеченных деталей.</p></details></div>
-</div></section><section class="section wrap" id="faq">
+</div></section><section class="section wrap" id="tools">
+<p class="eyebrow">Демонстрация · Япония → Владивосток</p>
+<h2>Расчёт стоимости</h2>
+<p>Учебный расчёт в рублях. Подставьте свои суммы. Расходы на оформление задаются вручную, а ставки и курсы здесь не используются.</p>
+<form class="request" id="calculator">
+<label>Покупка, ₽<input name="purchase" type="number" min="0" max="999999999" step="1" value="900000" required></label>
+<label>Доставка, ₽<input name="shipping" type="number" min="0" max="999999999" step="1" value="180000" required></label>
+<label>Оформление, ₽<input name="paperwork" type="number" min="0" max="999999999" step="1" value="350000" required></label>
+<label>Услуги, ₽<input name="service" type="number" min="0" max="999999999" step="1" value="90000" required></label>
+<p class="calc-total">Условный итог <output aria-live="polite">1 520 000 ₽</output></p>
+</form>
+</section>
+<section class="section wrap" id="directions">
+<p class="eyebrow">Два сценария покупки</p>
+<h2>Япония и Китай</h2>
+<div class="auction">
+<article><h3>Япония · аукцион</h3><p>Сравниваем лоты по комплектации, пробегу и замечаниям в листе. Перед торгами согласуем предельную ставку. Выигрыш зависит от результата торгов.</p><a href="#auction">Разобрать аукционный лист</a></article>
+<article><h3>Китай · продавец</h3><p>Сравниваем предложения по цене, комплектации и наличию. До покупки уточняем документы, доступность осмотра и условия отгрузки.</p><a href="#inspection">Посмотреть образец отчёта</a></article>
+</div>
+</section>
+<section class="section wrap" id="route-demo">
+<p class="eyebrow">Учебный маршрут · схема без масштаба</p>
+<h2>Через Владивосток</h2>
+<figure class="route-map">
+<svg viewBox="0 0 540 160" role="img" aria-label="Из Йокогамы морем во Владивосток, затем наземная доставка до города клиента">
+<path d="M65 100 Q150 15 270 66 T475 85" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="6 5"/>
+<g fill="currentColor"><circle cx="65" cy="100" r="7"/><circle cx="270" cy="66" r="7"/><circle cx="475" cy="85" r="7"/></g>
+<g fill="currentColor" text-anchor="middle" font-size="17"><text x="65" y="132">Йокогама</text><text x="270" y="41">Владивосток</text><text x="460" y="121">Город клиента</text></g>
+</svg>
+<figcaption>Йокогама → морская перевозка → Владивосток → доставка по России при необходимости.</figcaption>
+</figure>
+</section>
+<section class="section wrap" id="inspection">
+<p class="eyebrow">Учебный образец · вымышленные данные</p>
+<h2>Отчёт по осмотру</h2>
+<p>Toyota Corolla Touring. Такой формат помогает собрать замечания и вопросы до решения о покупке.</p>
+<dl class="cost"><div><dt>Кузов</dt><dd>Царапина на двери. Запросить крупный план.</dd></div><div><dt>Салон</dt><dd>Следы износа на сиденье водителя.</dd></div><div><dt>Пробег</dt><dd>58 400 км по листу. Сверка по документам ожидается.</dd></div><div><dt>Техника</dt><dd>Холодный запуск и диагностика в этом примере ещё не проверены.</dd></div></dl>
+</section>
+<section class="section wrap" id="payments">
+<p class="eyebrow">Пример порядка · условия согласуются отдельно</p>
+<h2>Как могут идти платежи</h2>
+<ol class="steps"><li><h3>До покупки</h3><p>Согласуются смета, условия договора и возможный аванс за подбор.</p></li><li><h3>После выбора автомобиля</h3><p>Покупка оплачивается по счёту. Получатель и валюта указаны в документах сделки.</p></li><li><h3>Перевозка и оформление</h3><p>Оплачиваются согласованные услуги перевозчика, оформление и предусмотренные сметой расходы.</p></li><li><h3>Перед выдачей</h3><p>Сверяются итоговые расходы и оставшиеся платежи, если они предусмотрены договором.</p></li></ol>
+</section>
+<section class="section wrap" id="faq">
 <p class="eyebrow">До первого обращения</p>
 <h2>Частые вопросы</h2>
 <details><summary>Можно обратиться без конкретной модели?</summary><p>Да. Начните с бюджета, города и задач. Например, нужен семейный автомобиль с просторным багажником.</p></details>
@@ -109,6 +152,7 @@
 <footer class="wrap">Автобюро <span>Рабочее название</span></footer>
 <script src="../navigation.js" defer></script><script src="../request.js" defer></script><script src="features.js" defer></script></body>
 </html>
+
 
 
 
