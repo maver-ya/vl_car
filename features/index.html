@@ -90,10 +90,10 @@
 <h2>Расчёт стоимости</h2>
 <p>Учебный расчёт в рублях. Подставьте свои суммы. Расходы на оформление задаются вручную, а ставки и курсы здесь не используются.</p>
 <form class="request" id="calculator">
-<label>Покупка, ₽<input name="purchase" type="number" min="0" max="999999999" step="1" value="900000" required></label>
-<label>Доставка, ₽<input name="shipping" type="number" min="0" max="999999999" step="1" value="180000" required></label>
-<label>Оформление, ₽<input name="paperwork" type="number" min="0" max="999999999" step="1" value="350000" required></label>
-<label>Услуги, ₽<input name="service" type="number" min="0" max="999999999" step="1" value="90000" required></label>
+<label>Покупка, ₽<input name="purchase" type="text" inputmode="numeric" value="900 000" data-step="50000" required></label>
+<label>Доставка, ₽<input name="shipping" type="text" inputmode="numeric" value="180 000" data-step="10000" required></label>
+<label>Оформление, ₽<input name="paperwork" type="text" inputmode="numeric" value="350 000" data-step="10000" required></label>
+<label>Услуги, ₽<input name="service" type="text" inputmode="numeric" value="90 000" data-step="5000" required></label>
 <p class="calc-total">Условный итог <output aria-live="polite">1 520 000 ₽</output></p>
 </form>
 </section>
@@ -152,6 +152,7 @@
 <footer class="wrap">Автобюро <span>Рабочее название</span></footer>
 <script src="../navigation.js" defer></script><script src="../request.js" defer></script><script src="features.js" defer></script></body>
 </html>
+
 
 
 

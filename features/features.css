@@ -12,3 +12,7 @@
 .calc-total output { color: var(--accent); font-size: 1.45rem; font-weight: 750; }
 .route-map { max-width: 760px; color: var(--accent); }
 .route-map svg { display: block; width: 100%; border-block: 1px solid var(--line); }
+.amount-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: end; }
+.amount-controls button { min-width: 36px; min-height: 40px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--accent); font: inherit; }
+.amount-controls button:hover { border-color: var(--accent); }
+.amount-controls input, .calc-total output { font-variant-numeric: tabular-nums; }
