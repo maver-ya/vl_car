@@ -13,9 +13,9 @@
 <section class="section intro-customs"><p class="eyebrow">Япония / Китай → Владивосток</p><h1>Таможенный<br><em>калькулятор.</em></h1><p>Подготовьте данные автомобиля для расчёта пошлины, таможенного и утилизационного сборов.</p><p class="status-note">Предварительный расчёт по правилам 2026 года для прямого ввоза ДВС физлицом. Итог зависит от принятой таможней стоимости и подтверждения условий утильсбора.</p></section>
 <section class="section" id="vehicle"><p class="eyebrow">01 / Данные для расчёта</p><h2>Автомобиль и ввоз</h2>
 <p>Первая версия рассчитана на прямой ввоз легкового автомобиля с ДВС физическим лицом для личного пользования.</p>
-<form id="customs-form" class="request">
+<p class="date-help">Обычно достаточно года выпуска. На границе 3 и 5 лет потребуется точная дата.</p><form id="customs-form" class="request">
 <label>Страна покупки<select name="country" required><option>Япония</option><option>Китай</option></select></label>
-<label>Год выпуска<input type="number" name="year" min="1950" max="2026" step="1" placeholder="2022" required><small>Точную дату можно уточнить ниже.</small></label><label>Точная дата выпуска, если известна<input type="date" name="manufactured"><small>Нужна на границе возрастных категорий.</small></label>
+<label>Год выпуска<input type="number" name="year" min="1950" max="2026" step="1" placeholder="2022" required></label><label>Точная дата выпуска, если известна<input type="date" name="manufactured"></label>
 <label>Предполагаемое оформление<input type="date" name="clearance" min="2026-01-01" max="2026-12-31" required></label>
 <label>Двигатель<select name="engine"><option>Бензиновый ДВС</option><option>Дизельный ДВС</option></select></label>
 <label>Объём двигателя, см³<input name="capacity" type="text" inputmode="numeric" pattern="[0-9\s]+" placeholder="1 500" required></label>
@@ -33,7 +33,9 @@
 <section class="section" id="result"><p class="eyebrow">02 / Структура результата</p><h2>Предварительные платежи</h2><dl class="cost"><div><dt>Пошлины и налоги</dt><dd data-amount>—</dd></div><div><dt>Таможенный сбор</dt><dd data-amount>—</dd></div><div><dt>Утилизационный сбор</dt><dd data-amount>—</dd></div><div><dt>Итого</dt><dd id="total">—</dd></div></dl><p id="calculation-note" role="status"></p><p class="result-note">Курсы — официальный снимок ЦБ на указанную дату. При оформлении на другую дату сумма изменится. Стоимость для расчёта должна подтверждаться документами; принятая таможней оценка может отличаться от цены покупки. Доставка, документы и услуги команды добавляются к смете отдельно.</p></section>
 <section class="section"><p class="eyebrow">Нормативная основа</p><h2>Правила и источники</h2><ul class="sources"><li><a href="https://docs.eaeunion.org/en/documents/317/8824/">Решение Совета ЕЭК № 107</a> — правила для товаров личного пользования.</li><li><a href="https://www.alta.ru/tamdoc/25ps1638/">Изменения к постановлению № 1637</a> — таможенные сборы.</li><li><a href="https://www.alta.ru/tamdoc/13ps1291/">Постановление № 1291</a> — утилизационный сбор.</li><li><a href="https://www.cbr.ru/development/sxml/">Банк России</a> — курсы валют.</li></ul><p>Источники собраны 11 ноября 2026 года. Полная сверка редакций и исключений для расчёта ещё не завершена.</p></section>
 </main><footer class="wrap"><a href="../">← Демоверсия с функциями</a><a href="#top">Наверх ↑</a></footer>
-<script src="../../navigation.js" defer></script><script src="rates.js" defer></script><script src="customs.js" defer></script>
+<script src="../../navigation.js" defer></script><script src="rates.js" defer></script><script src="customs.js" defer></script><script src="controls.js" defer></script>
 </body></html>
+
+
 
 

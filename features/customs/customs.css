@@ -24,3 +24,27 @@
 #result dd { font-variant-numeric: tabular-nums; }
 @media(max-width: 900px) { #customs-form { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media(max-width: 560px) { #customs-form { grid-template-columns: 1fr; } }
+/* Labels and controls share the same rhythm; hints stay outside the grid rows. */
+#customs-form { column-gap: 22px; row-gap: 24px; }
+#customs-form > label, .custom-field { position: relative; display: grid; align-content: start; gap: 8px; min-width: 0; font-size: .9rem; font-weight: 650; }
+#customs-form > label > small, .custom-field > small { display: none; }
+.custom-field .control-source { position: absolute; width: 1px !important; min-height: 0 !important; height: 1px; padding: 0 !important; opacity: 0; pointer-events: none; }
+.control-trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 49px; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: color-mix(in srgb, var(--paper) 80%, var(--ink) 4%); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.control-trigger[aria-expanded="true"], .control-trigger:hover { border-color: var(--accent); }
+.control-trigger[aria-invalid="true"] { outline: 2px solid #bb654e; }
+.control-panel { position: absolute; inset: calc(100% + 6px) 0 auto; z-index: 10; padding: 6px; max-height: 310px; overflow-y: auto; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px #0003; }
+.control-panel[hidden] { display: none; }
+#customs-form .control-panel button { color: var(--ink); background: transparent; border: 0; border-radius: 7px; margin: 0; font: inherit; cursor: pointer; }
+#customs-form .select-option { display: block; width: 100%; padding: 10px 12px; text-align: left; }
+#customs-form .select-option:hover, #customs-form .select-option:focus-visible, #customs-form .select-option[aria-selected="true"] { background: var(--accent); color: var(--paper); }
+#customs-form .calendar { padding: 12px; width: min(320px, 100%); max-height: none; }
+.calendar-heading { display: grid; grid-template-columns: 28px 1fr 76px 28px; align-items: center; gap: 4px; margin-bottom: 10px; }
+#customs-form .calendar-year { min-height: 32px; padding: 4px; border-radius: 6px; width: 100%; }
+#customs-form .calendar-heading button { min-height: 32px; font-size: 1.4rem; }
+.calendar-weekdays, .calendar-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; text-align: center; }
+.calendar-weekdays { font-size: .7rem; color: var(--muted); margin-bottom: 5px; }
+#customs-form .calendar-days button { aspect-ratio: 1; padding: 0; min-width: 0; }
+#customs-form .calendar-days button:hover, #customs-form .calendar-days button[aria-current="date"] { background: var(--accent); color: var(--paper); }
+#customs-form .calendar-days button:disabled { opacity: .3; cursor: default; }
+#customs-form .calendar-clear { padding: 8px; font-size: .8rem; margin-top: 8px; }
+.field-caption { line-height: 1.6; }
