@@ -7,3 +7,20 @@
 .result-note { margin-top: 20px; }
 .sources { padding-left: 20px; }
 .sources li { margin-bottom: 10px; }
+#customs-form { max-width: none; gap: 22px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#customs-form label { font-size: .9rem; gap: 8px; }
+#customs-form input, #customs-form select, #customs-form textarea {
+  padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+  background: color-mix(in srgb, var(--paper) 80%, var(--ink) 4%);
+  min-height: 49px; font-variant-numeric: tabular-nums; color: var(--ink);
+}
+#customs-form select { text-overflow: ellipsis; }
+#customs-form small { color: var(--muted); font-weight: 400; }
+#customs-form .check { display: flex; align-items: center; font-weight: 400; }
+#customs-form .check input { min-height: 20px; width: 20px; flex: 0 0 20px; accent-color: var(--accent); }
+.rate-note { font-size: .85rem; }
+#result { scroll-margin-top: 20px; }
+#result .cost div:last-child { font-size: 1.3rem; font-weight: 750; color: var(--accent); }
+#result dd { font-variant-numeric: tabular-nums; }
+@media(max-width: 900px) { #customs-form { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media(max-width: 560px) { #customs-form { grid-template-columns: 1fr; } }
