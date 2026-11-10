@@ -68,7 +68,21 @@
 <p>Упрощённый макет с вымышленными данными. Обозначения и шкалы могут отличаться у разных аукционов.</p>
 <div class="auction">
 <dl class="cost"><div><dt>Лот</dt><dd>0421</dd></div><div><dt>Модель</dt><dd>Toyota Corolla Touring</dd></div><div><dt>Пробег</dt><dd>58 400 км</dd></div><div><dt>Оценка</dt><dd>4 / B</dd></div><div><dt>Кузов</dt><dd>A1 · U1</dd></div></dl>
-<div><details open><summary>Пробег</summary><p>Проверьте число и отметки рядом с ним. Если есть сомнения, попросите сверить пробег с доступными документами.</p></details>
+<div><figure class="body-map">
+<svg viewBox="0 0 300 180" role="img" aria-labelledby="body-title body-desc">
+<title id="body-title">Схема кузова, вид сверху</title>
+<desc id="body-desc">Перед автомобиля слева. A1 отмечает царапину на левой передней двери, U1 — вмятину на правом заднем крыле.</desc>
+<g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+<path d="M38 59Q26 62 26 76v28q0 14 12 17l38 8h148l35-8q15-4 15-18V77q0-14-15-18l-35-8H76z"/>
+<path d="m76 51 21 22v34l-21 22m148-78-19 24v30l19 24M97 73h108v34H97m34-56v22m38-22v22m-38 34v22m38-22v22"/>
+<path d="M118 42v16m115 65v16" stroke-dasharray="3 3"/>
+</g>
+<g fill="currentColor" font-family="monospace" font-size="14" text-anchor="middle">
+<text x="118" y="35">A1</text><text x="233" y="156">U1</text><text x="44" y="151">ПЕРЕД</text>
+</g></svg>
+<figcaption>Учебная схема · A1 — левая передняя дверь, U1 — правое заднее крыло.</figcaption>
+</figure>
+<p><a href="https://exportcarjapan.com/gallery/Auction%20Sheet%20Examples.pdf">Посмотреть примеры оригинальных листов (PDF) ↗</a></p><details open><summary>Пробег</summary><p>Проверьте число и отметки рядом с ним. Если есть сомнения, попросите сверить пробег с доступными документами.</p></details>
 <details><summary>Оценка 4 / B</summary><p>В этом примере 4 — общая оценка, B — состояние салона. Смотрите расшифровку конкретного аукциона и комментарии инспектора.</p></details>
 <details><summary>Замечания A1 и U1</summary><p>На схеме кузова A1 может обозначать небольшую царапину, а U1 — небольшую вмятину. Сверьте обозначения с легендой листа и попросите фото отмеченных деталей.</p></details></div>
 </div></section><section class="section wrap" id="faq">
@@ -91,10 +105,11 @@
 <p class="notice" id="contact-note">Демо-версия. Готовый текст можно скопировать. Кнопка Telegram появится после подключения рабочего контакта.</p>
 <p id="request-status" role="status"></p>
 </form></section>
-</main><div class="wrap back-row"><a href="#top">Вернуться наверх ↑</a></div>
+</main><a class="floating-top" href="#top">Наверх ↑</a>
 <footer class="wrap">Автобюро <span>Рабочее название</span></footer>
 <script src="../navigation.js" defer></script><script src="../request.js" defer></script><script src="features.js" defer></script></body>
 </html>
+
 
 
 

@@ -3,3 +3,8 @@
 .auction { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 5vw, 68px); margin-top: 24px; }
 .auction dl { border-top: 2px solid var(--accent); }
 @media (max-width: 760px) { .auction { grid-template-columns: 1fr; } }
+.body-map { max-width: 390px; margin-bottom: 14px; color: var(--accent); }
+.body-map svg { display: block; width: 100%; border: 1px solid var(--line); }
+.body-map figcaption { display: block; text-transform: none; }
+.floating-top { position: fixed; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); z-index: 6; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--accent); font-weight: 700; text-decoration: none; }
+.floating-top[hidden] { display: none; }

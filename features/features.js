@@ -8,3 +8,10 @@ document.querySelectorAll('[data-car]').forEach((link) => {
     carField.focus({ preventScroll: true });
   });
 });
+
+const backToTop = document.querySelector('.floating-top');
+function updateBackToTop() {
+  backToTop.hidden = window.scrollY < 320;
+}
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+updateBackToTop();
