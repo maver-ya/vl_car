@@ -1,0 +1,9 @@
+.intro-customs { border-top: 0; padding-bottom: 40px; }
+.intro-customs h1 { font-size: clamp(2.8rem, 7vw, 6rem); overflow-wrap: anywhere; }
+.intro-customs h1 em { color: var(--accent); }
+.status-note { border-left: 2px solid var(--accent); padding-left: 16px; }
+.request select { width: 100%; min-width: 0; padding: 10px 0; border: 0; border-bottom: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; }
+.request label { align-content: start; }
+.result-note { margin-top: 20px; }
+.sources { padding-left: 20px; }
+.sources li { margin-bottom: 10px; }

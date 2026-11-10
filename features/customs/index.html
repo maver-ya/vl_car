@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Таможенный калькулятор — Автобюро</title>
+<meta name="description" content="Подготовка расчёта платежей при прямом ввозе легкового автомобиля с ДВС для личного пользования через Владивосток.">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="customs.css">
+</head>
+<body id="top">
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="../../">Автобюро</a><nav id="site-nav" aria-label="Разделы"><a href="../">Все функции</a><a href="#vehicle">Данные машины</a><a href="#result">Платежи</a></nav><div class="header-controls"><button id="theme" type="button" aria-label="Тёмная тема" aria-pressed="false" hidden>◐</button><button id="menu" type="button" aria-controls="site-nav" aria-expanded="false" hidden>☰ Меню</button></div></div></header>
+<main class="wrap">
+<section class="section intro-customs"><p class="eyebrow">Япония / Китай → Владивосток</p><h1>Таможенный<br><em>калькулятор.</em></h1><p>Подготовьте данные автомобиля для расчёта пошлины, таможенного и утилизационного сборов.</p><p class="status-note">Прототип формы. Проверка таблиц ставок продолжается. Автоматический расчёт платежей появится после сверки правил и контрольных примеров.</p></section>
+<section class="section" id="vehicle"><p class="eyebrow">01 / Данные для расчёта</p><h2>Автомобиль и ввоз</h2>
+<p>Первая версия рассчитана на прямой ввоз легкового автомобиля с ДВС физическим лицом для личного пользования.</p>
+<form id="customs-form" class="request">
+<label>Страна покупки<select name="country" required><option>Япония</option><option>Китай</option></select></label>
+<label>Дата выпуска<input type="date" name="manufactured" required></label>
+<label>Предполагаемое оформление<input type="date" name="clearance" required></label>
+<label>Двигатель<select name="engine"><option>Бензиновый ДВС</option><option>Дизельный ДВС</option></select></label>
+<label>Объём двигателя, см³<input name="capacity" type="number" min="1" max="20000" step="1" required></label>
+<label>Мощность, кВт<input name="power" type="number" min="0.01" max="3000" step="0.01" required></label>
+<label>Цена покупки<input name="price" type="text" inputmode="decimal" placeholder="1 000 000" required></label>
+<label>Валюта<select name="currency"><option>JPY</option><option>CNY</option><option>USD</option><option>EUR</option><option>RUB</option></select></label>
+<label>Предыдущий ввоз за 12 месяцев<select name="previous" required><option value="">Выберите</option><option>Нет</option><option>Да</option><option>Нужно уточнить</option></select></label>
+<label>Оформлялась в другой стране ЕАЭС<select name="eaeu" required><option value="">Выберите</option><option>Нет</option><option>Да</option><option>Не знаю</option></select></label>
+<label>Передача другому владельцу в течение 12 месяцев<select name="resale" required><option value="">Выберите</option><option>Не планируется</option><option>Планируется</option><option>Нужно уточнить</option></select></label>
+<div class="request-actions"><button class="button" type="submit">Подготовить запрос ↗</button></div>
+<p id="form-status" role="status"></p>
+<label class="message">Запрос менеджеру<textarea id="customs-request" rows="7" readonly placeholder="Здесь появятся сведения для расчёта"></textarea></label>
+<div class="request-actions"><button class="button" id="copy-customs" type="button" disabled>Скопировать запрос</button></div>
+</form></section>
+<section class="section" id="result"><p class="eyebrow">02 / Структура результата</p><h2>Какие платежи рассчитаем</h2><dl class="cost"><div><dt>Пошлины и налоги</dt><dd>Сумма ожидает проверки правил</dd></div><div><dt>Таможенный сбор</dt><dd>Сумма ожидает проверки правил</dd></div><div><dt>Утилизационный сбор</dt><dd>Сумма ожидает проверки правил</dd></div></dl><p class="result-note">У каждой строки будут основание, формула, дата ставок и использованный курс. Доставка, документы и услуги команды добавляются к смете отдельно.</p></section>
+<section class="section"><p class="eyebrow">Нормативная основа</p><h2>Правила и источники</h2><ul class="sources"><li><a href="https://docs.eaeunion.org/en/documents/317/8824/">Решение Совета ЕЭК № 107</a> — правила для товаров личного пользования.</li><li><a href="https://www.alta.ru/tamdoc/25ps1638/">Изменения к постановлению № 1637</a> — таможенные сборы.</li><li><a href="https://www.alta.ru/tamdoc/13ps1291/">Постановление № 1291</a> — утилизационный сбор.</li><li><a href="https://www.cbr.ru/development/sxml/">Банк России</a> — курсы валют.</li></ul><p>Источники собраны 11 ноября 2026 года. Полная сверка редакций и исключений для расчёта ещё не завершена.</p></section>
+</main><footer class="wrap"><a href="../">← Демоверсия с функциями</a><a href="#top">Наверх ↑</a></footer>
+<script src="../../navigation.js" defer></script><script src="customs.js" defer></script>
+</body></html>
